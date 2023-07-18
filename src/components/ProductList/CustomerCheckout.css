@@ -1,0 +1,43 @@
+.form-card{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px;
+    width: 900px;
+    justify-content: space-between;
+    margin-left: 20px;
+    
+    
+}
+
+.space{
+    position: relative;
+    padding: 20px;
+    width: 1000px;
+    margin-left: 280px;
+    margin-top: 80px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    
+}
+
+.form-control{
+    width: 400px;
+    
+}
+
+.btn-sub{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-left: 40px;
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 160px;
+    
+}
+
+.btn-sub-2{
+    width: 400px;
+    margin-top: 20px;
+
+}

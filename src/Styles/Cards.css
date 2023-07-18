@@ -1,0 +1,59 @@
+.Cards{
+    position: absolute;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.Card{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 160px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.Card-title{
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(87, 153, 246);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.value{
+    position: relative;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 50px;
+    top: -55px;
+    display: flex;
+    margin-left: 180px;
+    
+}
+
+.icon-card{
+    position: relative;
+    font-size: 50px;
+    margin-left: 40px;
+    top: 10px;
+    color: gray;
+   
+   
+}
+
+.Card:hover{
+    transform: scale(1.1);
+    background-color: aqua;
+}
+
+
+

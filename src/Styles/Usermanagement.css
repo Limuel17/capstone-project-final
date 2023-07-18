@@ -1,0 +1,30 @@
+@import "rsuite/dist/rsuite.min.css";
+
+.customCard {
+  background-color: unset !important;
+  margin-top: 4%;
+  
+  
+}
+
+.customCardBody {
+  margin-bottom: 20px;
+}
+
+.userToggleBtn {
+  padding-right: 20px;
+}
+
+.userman{
+  width: 200%;
+  margin-top: -230px;
+  height: 65%;
+}
+
+
+
+.row-1{
+  width: 75%;
+  
+}
+

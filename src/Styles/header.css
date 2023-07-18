@@ -1,0 +1,43 @@
+.bg-primary{
+ position: relative;
+ height: 60px;
+ width: 100%;
+
+}
+
+
+.logo-title{
+    display: flex;
+    color: white; 
+    font-family: sans-serif;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.logo-title1{
+    font-weight: 700;
+    font-size: 32px;
+}
+.logo-title2{
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+.bg-primary{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .logo-title{
+        margin-left: 18px;
+    }
+	
+   
+}
+
+
+
