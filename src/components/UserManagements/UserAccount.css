@@ -1,0 +1,54 @@
+.user_image{
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+   
+    
+    
+
+}
+
+.table-1{
+  width: 140%;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 100px;
+  
+}
+
+
+
+.descrip{
+ align-content: flex-end; 
+ position: relative;
+
+}
+
+.btn-55{
+    margin-left: 10px;
+
+    width: 100px;
+
+}
+
+.t_body{
+
+    background-color: blue;
+
+}
+
+.btn-user{
+   width: 130px;
+   margin-left: 10px;
+   margin-bottom: 10px;
+   font-size: 16px;
+}
+
+.icon-btn{
+    
+    font-size: 23px;
+    margin-right: 10px;
+    text-align: center;
+    
+}

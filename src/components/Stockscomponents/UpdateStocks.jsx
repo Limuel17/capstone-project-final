@@ -72,7 +72,7 @@ useEffect(() => {
          <div className='mb-2'>
              <label htmlFor="">Model</label>
              <input type="text" placeholder=''  className='form-control mb-2'
-             value={model ? model : 'N/A'} onChange={e => setModel(e.target.value)}/>
+             value={model} onChange={e => setModel(e.target.value)}/>
          </div>
          <div className='mb-2'>
              <label htmlFor="">Color</label>

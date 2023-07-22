@@ -29,17 +29,19 @@ main{
     
 }
 .top_section{
-    display: flex;
+   
     align-items:center;
     padding:20px 15px;
 }
 .logo{
-    font-size: 30px;
+    position: absolute;
+    font-size: 22px;
+    text-align: center;
+    margin-top: -3px;
 }
 .bars{
-    display: flex;
-    font-size: 25px;
-    margin-left: 50px;
+   margin-top: -1px;
+    
 }
 .link{
     display: flex;

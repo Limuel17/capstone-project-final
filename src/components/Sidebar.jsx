@@ -17,8 +17,8 @@ import Header from './Header'
 
 
 const Sidebar = ({children}) => {
-    const[isOpen ,setIsOpen] = useState(false);
-    const toggle = () => setIsOpen (!isOpen);
+    const[isClose ,setIsOpen] = useState(true);
+    const toggle = () => setIsOpen (!isClose);
     const menuItem=[
         {
             path:"/",
@@ -68,11 +68,12 @@ const Sidebar = ({children}) => {
        <div> <Header/>  
         <div className="container">
            
-        <div style={{width: isOpen ? "250px" : "50px"}} className="sidebar" >
+        <div style={{width: isClose ? "250px" : "50px"}} className="sidebar" >
             <div className="top_section">
-                <h1 style={{display: isOpen ? "block" : "none"}} className="logo">ACIS</h1>
+                <h1 style={{display: isClose ? "block" : "none"}} className="logo">Welcome Admin</h1>
                 
-                <div style={{marginLeft: isOpen ? "148px" : "-4px"}} className="bars">
+                
+                <div style={{marginLeft: isClose ? "217px" : "-4px"}} className="bars">
                     <BsFillArrowRightCircleFill onClick={toggle}/>
                     
                 </div>
@@ -82,7 +83,7 @@ const Sidebar = ({children}) => {
                 menuItem.map((item, index)=>(
                     <Link to={item.path} key={index} className="link" activeclassName="active" style={{textDecoration: "none" }} >
                         <div className="icon">{item.icon}</div>
-                        <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
+                        <div style={{display: isClose ? "block" : "none"}} className="link_text">{item.name}</div>
                     </Link>
                 ))
             }

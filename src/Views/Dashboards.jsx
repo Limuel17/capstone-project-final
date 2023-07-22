@@ -1,6 +1,5 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
-import '../Styles/DashBoards.css'
 import Cards from '../components/Cards'
 import Graph from '../components/Graph/Graph'
 

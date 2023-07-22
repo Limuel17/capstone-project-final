@@ -35,7 +35,7 @@ const LoginForm = () => {
 
         <form  className="login" onSubmit={handleSubmit}>
         <h2 className='autodeal'>AUTODEAL</h2>
-      <div className="text-danger">{error && error}</div>
+      <div className="text-danger p-text2">{error && error}</div>
       <br />
       <div>
         <label htmlFor="username">Username:</label>
@@ -55,7 +55,7 @@ const LoginForm = () => {
         />
       </div>
       <button type="submit">Login</button>
-      <p>You are Agree to our terms and policies</p>
+      <p className='p-text'>You are Agree to our terms and policies.</p>
     </form>
   );
 };

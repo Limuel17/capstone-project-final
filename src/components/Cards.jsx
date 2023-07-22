@@ -4,6 +4,7 @@ import { TbCurrencyPeso } from 'react-icons/tb';
 import { BsFillCarFrontFill , BsPeopleFill} from 'react-icons/bs';
 import { AiOutlineDropbox } from "react-icons/ai";
 
+
 import '../Styles/Cards.css'
 
 
@@ -47,6 +48,9 @@ const Cards = () => {
                 <h3 className='Card-title'>{cards.title}</h3>
                  <i className='icon-card'>{cards.icon}</i>
                 <h2 className='value amount-value'>{cards.value}</h2>
+                
+                
+                
             </div>
 
             

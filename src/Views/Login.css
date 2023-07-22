@@ -7,7 +7,7 @@
   background-color: #fff;
 
   margin-bottom: 250px;
-  margin-top: 290px;
+  margin-top: 240px;
 }
 
 .login label {
@@ -41,4 +41,21 @@
   .login-title{
     text-align: center;
     margin-bottom: 20px;
+  }
+
+
+
+  .p-text{
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  .p-text2{
+    position: absolute;
+  }
+
+ .autodeal{
+
+  font-weight: 700;
+  text-align: center;
   }

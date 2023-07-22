@@ -3,6 +3,9 @@ import cors from 'cors'
 import mysql from 'mysql'
 import multer from 'multer'
 import path from 'path'
+import cookieParser from 'cookie-parser'
+import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
 
 
 const app = express();
@@ -61,6 +64,92 @@ app.post('/login', (req, res) => {
         
     })
 })
+
+//Adduser//
+
+app.post('/adduser',upload.single('image'), (req, res) => {
+    const sql = "INSERT INTO login (`Fullname`,`Email`,`Username`, `Password`, `Position`,`Age`, `Salary`, `Image`) VALUES (?)";
+    bcrypt.hash(req.body.password.toString(), 10, (err, hash) => {
+        if(err) return res.json({Error: "Error in hashing password"});
+        const values = [
+            req.body.fullname,
+            req.body.email,
+            req.body.username,
+            hash,
+            req.body.position,
+            req.body.age,
+            req.body.salary,
+            req.file.filename
+        ]
+        db.query(sql, [values], (err, result) => {
+            if(err) return res.json({Error: "Inside singup query"});
+            return res.json({Status: "Success"});
+        })
+    } )
+})
+
+
+
+app.get('/getuser', (req, res) => {
+    const sql = "SELECT * FROM login";
+    db.query(sql, (err, result) => {
+        if(err) return res.json({Error: "Get user error in sql"});
+        return res.json({Status: "Success", Result: result})
+    })
+})
+
+
+
+
+
+app.get('/userget/:userid', (req, res) => {
+    const userid = req.params.userid;
+    const sql = "SELECT * FROM login WHERE userid = ?";
+    db.query(sql, [userid], (err, result) => {
+        if(err) return res.json({Error: "Get user error in sql"});
+        return res.json({Status: "Success", Result: result})
+    })
+})
+
+app.put('/userupdate/:userid', (req, res) => {
+    const id = req.params.userid;
+    const sql = "UPDATE login SET `Fullname` = ?, `Email` = ?,  `Username` = ?, `Password` = ?, `Position` = ?, `Age` = ?, `Salary` = ?  WHERE userid = ?";
+    db.query(sql, 
+         [  req.body.fullname,
+            req.body.email,
+            req.body.username,
+            req.body.password,
+            req.body.position,
+            req.body.age,
+            req.body.salary,
+            
+                            id]
+        , (err, result) => {
+        if(err) return res.json({Error: "update employee error in sql"});
+        return res.json({Status: "Success"})
+    })
+})
+
+
+
+
+
+
+app.delete('/userdelete/:userid', (req, res) => {
+    const userid = req.params.userid;
+    const sql = "DELETE FROM login WHERE userid = ?";
+    db.query(sql, [userid], (err, result) => {
+        if(err) return res.json({Error: "delete user error in sql"});
+        return res.json({Status: "Success"})
+    })
+})
+
+
+
+
+
+
+
 
 
 //Customer Sales DATABASE//
